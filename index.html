@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>С Днем Рождения, Мамуль! </title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <audio id="bg-music" loop>
+        <source src="ocean.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-btn" class="music-control">Музыка: Выкл 🔇</button>
+
+    <div class="container">
+        <h1 class="main-title">💜 С Днем Рождения, Мамуль! 💜</h1>
+<p class="subtitle">✨Тебе сегодря 39 но в душе теб все еще 18, Я создал этот сайт специально для тебя с любовью ✨</p>
+        <div class="timer-box">
+            Я твой ребенок уже:
+            <div id="time">считаем...</div>
+        </div>
+
+        <br><br>
+        <div class="magic-box">
+            <button class="magic-btn" onclick="showCompliment()">Нажми сюда, мам! ✨</button>
+            <p id="compliment-text"></p>
+        </div>
+
+       <div class="pinterest-gallery">
+    <div class="slide-card">
+        <img src="мамочка2013.jpg" alt="2013">
+        <div class="photo-label">2013</div>
+        <div class="card-text">
+    «Начало нашего пути. Время, когда ты стала моей главной поддержкой и опорой.»
+</div>
+    </div>
+    <div class="slide-card">
+        <img src="мамуля2016год.jpg" alt="2016">
+        <div class="photo-label">2016</div>
+        <div class="card-text">
+  «Год первых совместных секретов и бесконечных объятий. Рядом с тобой всегда уютно.»
+</div>
+    </div>
+    <div class="slide-card">
+        <img src="мамуля2020.jpg" alt="2020">
+        <div class="photo-label">2020</div>
+        <div class="card-text">
+  «Время наших приключений! Как же здорово, что ты всегда была рядом и верила в меня.»
+</div>
+    </div>
+    <div class="slide-card">
+        <img src="мама2024.jpg" alt="2024">
+        <div class="photo-label">2024</div>
+        <div class="card-text">
+  «Год новых открытий и ярких эмоций. Спасибо, что делаешь каждый мой день особенным.»
+</div>
+    </div>
+    <div class="slide-card">
+        <img src="мамуля2026.jpg" alt="2026">
+        <div class="photo-label">2026</div>
+        <div class="card-text">
+  «Продолжаем писать нашу историю. Ты для меня — лучший пример того, как нужно любить жизнь.»
+</div>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+
+    <button id="gift-btn" onclick="showGift()">Открыть подарок 🎁</button>
+<div id="gift-modal" style="display:none; position:fixed; top:20%; left:20%; right:20%; background:white; padding:20px; border-radius:20px; box-shadow:0 0 20px rgba(0,0,0,0.3); z-index:20000;">
+    <h2>Мамуля, ты самая лучшая!</h2>
+    <p>Спасибо за твое тепло и любовь. Ты — Лучшая женщина!</p>
+    <button onclick="document.getElementById('gift-modal').style.display='none'">Закрыть</button>
+    
+
+    <div class="promises">
+    <h3>Мои обещания тебе на этот год:</h3>
+    <ul>
+        <li>Чаще радовать улыбкой 😊</li>
+        <li>Больше помогать по дому 🏠</li>
+        <li>Ценить каждую минуту вместе ⏳</li>
+    </ul>
+</div>
+</div>
+<div class="footer-minimal">
+    <p>Всего моментов счастья: <strong>бесконечно</strong></p>
+    <p class="small-text">С любовью, твой ребенок 💜 2026</p>
+</div>
+<div class="test-container">
+    <h3>Мам, нажми, чтобы увидеть, за что я тебя люблю:</h3>
+    <div class="button-grid">
+        <button onclick="reveal(1)">Твоя забота 💜</button>
+        <button onclick="reveal(2)">Твоя улыбка ✨</button>
+        <button onclick="reveal(3)">Твоя мудрость 📚</button>
+        <button onclick="reveal(4)">Твои советы 💬</button>
+        <button onclick="reveal(5)">То, что ты есть 🌹</button>
+    </div>
+    <p id="reveal-text" style="font-size: 1.2em; font-weight: bold; color: #8e44ad; margin-top: 20px;"></p>
+</div>
+<div id="auth-screen" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#fdf5ff; z-index:9999; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+    <h3>Докажи, что ты моя мама! 💜</h3>
+    <p>Как ты меня называешь?</p>
+    <input type="text" id="pass-input" placeholder="Введите слово...">
+    <button onclick="checkPassword()" style="margin-top:10px;">Проверить</button>
+    <p id="error-msg" style="color:red; margin-top:10px;"></p>
+</div>
+
+<div id="main-content" style="display:none;">
+    </div>
+
+</body>
+</html>
